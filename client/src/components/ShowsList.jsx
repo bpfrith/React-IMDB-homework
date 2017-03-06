@@ -1,4 +1,3 @@
-
 var React = require('react');
 var Show = require('./Show');
 
