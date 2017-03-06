@@ -1,6 +1,6 @@
 var React = require('react');
 
-var Show = React .createClass({
+var Show = React.createClass({
   render: function(){
     var showData = this.props.showData;
     return (

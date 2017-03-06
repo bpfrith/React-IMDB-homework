@@ -1,12 +1,17 @@
 var React = require('react');
-var Show = require('./Show');
+var Show = require('./Show.jsx');
 
 var ShowsList = React.createClass({
+
+  propTypes: {
+    title: React.PropTypes.string.isRequired
+  },
+
   render: function() {
 
-    var showElements = this.props.showsData.map( function(showData) {
+    var showElements = this.props.showsData.map(function(showData){
       return (
-        <Show key={ showData.id } showData={ showData } />
+        <Show key = {showData.id} showData = {showData}/>
       )
     });
 
@@ -14,12 +19,11 @@ var ShowsList = React.createClass({
       <div>
         <h2>Shows</h2>
         <ul>
-          { showElements }
+          {showElements}
         </ul>
       </div>
     );
   }
-
 });
 
 module.exports = ShowsList;
